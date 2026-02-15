@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Geom";
+  src: url("fonts/geom-v1-latin-regular.woff2") format("woff2");
+}
+:root {
+  --primary-color: #EDA398;
+  --secondary-color: #F9F4F5;
+  --text-color: #c1121f;
+  --bg-color: #fe7f2d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;
+  font-family: "Geom", sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.sidebar {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+  width: 60px;
+  border-radius: 24px;
+  background-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sidebar img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  align-self: center;
+  cursor: pointer;
+  filter: invert(17%) sepia(90%) saturate(3859%) hue-rotate(347deg) brightness(76%) contrast(101%);
+}
+.sidebar .sidebar-btn-name {
+  display: none;
+  white-space: nowrap;
+  font-size: 18px;
+  margin: 0 auto 0 8px;
+  align-self: center;
+}
+.sidebar .sidebar-btn-name.showNames {
+  display: inline;
+}
+
+.sidebar.toggleSidebar {
+  width: auto;
+}
+
+.home-btn, .zoom-btn, .info-btn, .toggle-sidebar-btn, .switch-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 44px;
+  padding: 6px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.home-btn:hover img, .zoom-btn:hover img, .info-btn:hover img, .toggle-sidebar-btn:hover img, .switch-btn:hover img {
+  scale: 0.9;
+}
+.home-btn:hover .sidebar-btn-name, .zoom-btn:hover .sidebar-btn-name, .info-btn:hover .sidebar-btn-name, .toggle-sidebar-btn:hover .sidebar-btn-name, .switch-btn:hover .sidebar-btn-name {
+  font-size: 16px;
+}
+
+.switch-btn {
+  margin-top: auto;
+}
+
+.zoom-btn, .info-btn, .toggle-sidebar-btn {
+  margin-top: 0;
+}
+
+.toggle-sidebar-icon {
+  transition: transform 0.4s linear;
+  transform: rotate(0deg);
+}
+
+.toggle-sidebar-icon.rotate180 {
+  transform: rotate(180deg);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.header {
+  display: flex;
+  flex-shrink: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 24px;
+  background-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.header form {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  gap: 4px;
+  height: 40px;
+  width: 100%;
+  border-radius: 14px;
+  margin: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--bg-color);
+  box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.header input {
+  height: 40px;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  border-radius: 14px;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 18px;
+}
+.header input::placeholder {
+  color: var(--text-color);
+}
+.header .search-btn {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  color: var(--text-color);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  transform: translate(-2.5%) scale(1.05);
+  outline: none;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 3px;
+}
+.header .search-btn:hover {
+  transform: translate(-5%) scale(1.1);
+}
+
+.subreddit-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-radius: 24px;
+  background-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.no-subreddit-message {
+  font-size: 20px;
+  font-weight: 400;
+  margin: auto;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

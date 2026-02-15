@@ -1,0 +1,17 @@
+$primary-color: #EDA398;
+$secondary-color: #F9F4F5;
+$bg-color: #fe7f2d;
+$text-color: #c1121f;
+$font-stack: 'Geom', sans-serif;
+
+@font-face {
+  font-family: 'Geom';
+  src: url('fonts/geom-v1-latin-regular.woff2') format('woff2');
+}
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --text-color: #{$text-color};
+  --bg-color: #{$bg-color};
+}

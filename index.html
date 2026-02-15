@@ -4,23 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reddit Client</title>
-    <style src="styles.css"></style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="sidebar">
-      <img src="images/#" alt="reddit client home" />
-      <img src="images/#" alt="settings" />
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="home-btn">
+          <img src="images/reddit.svg" alt="reddit client home" />
+          <h1 class="sidebar-btn-name">Reddit client</h1>
+        </div>
+        <div class="switch-btn">
+          <img src="images/light.png" alt="switch theme" />
+          <h2 class="sidebar-btn-name switch-btn-text">
+            Appearence: device theme
+          </h2>
+        </div>
+        <div class="zoom-btn">
+          <img src="images/settings.png" alt="zoom" />
+          <h2 class="sidebar-btn-name">Zoom: 100%</h2>
+        </div>
+        <div class="info-btn">
+          <img src="images/info.png" alt="info" />
+          <h2 class="sidebar-btn-name">Information</h2>
+        </div>
+        <div class="toggle-sidebar-btn">
+          <img
+            class="toggle-sidebar-icon"
+            src="images/angle-right.png"
+            alt="toggle sidebar"
+          />
+          <h2 class="sidebar-btn-name">Collapse sidebar</h2>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="header">
+          <form method="get">
+            <input
+              class="search-bar"
+              placeholder="Search your favorite subreddit..."
+              type="search"
+            />
+            <button class="search-btn" type="submit">ADD</button>
+          </form>
+        </div>
+        <div class="subreddit-list">
+          <p class="no-subreddit-message">
+            Nothing here yet. Try searching for your favorite subreddits!
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="header">
-      <form method="get">
-        <input class="search-bar" placeholder="Search your favorite subreddit " type="search" />
-        <button class="search-btn" type="submit">
-          <img class="search-icon" src="images/#" alt="search" />
-        </button>
-      </form>
-    </div>
-    <div class="subreddit-list">
-      <p class="no-subreddit-message">Nothing here yet. Try searching for your favorite subreddits!</p>
-    </div>
+    <script src="app.js"></script>
   </body>
 </html>
